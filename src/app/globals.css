@@ -26,46 +26,163 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-@layer keyframeAnimations {
-  .startingAnimationCSSTREE {
-    color: white;
-    animation-name: treeAnimation;
-    animation-duration: 2s;
-    animation-iteration-count: 1;
+@layer textUpAndDownAnimations {
+  .textUpAndDown1 {
+    animation-name: textUpAndDownAnimation;
+    animation-duration: 2.5s;
+    animation-delay: 1s;
   }
-  .textUpAndDown {
+  .textUpAndDown2 {
+    animation-name: textUpAndDownAnimation;
+    animation-duration: 2.5s;
+    animation-delay: 1.5s;
+  }
+  .textUpAndDown3 {
+    animation-name: textUpAndDownAnimation;
+    animation-duration: 2.5s;
+    animation-delay: 2s;
+  }
+  .textUpAndDown4 {
+    animation-name: textUpAndDownAnimation;
+    animation-duration: 2.5s;
+    animation-delay: 2.5s;
+  }
+  .textUpAndDown5 {
+    animation-name: textUpAndDownAnimation;
+    animation-duration: 2.5s;
+    animation-delay: 3s;
+  }
+  .textUpAndDown6 {
+    animation-name: textUpAndDownAnimation;
+    animation-duration: 2.5s;
+    animation-delay: 3.5s;
+  }
+  .textUpAndDown7 {
+    animation-name: textUpAndDownAnimation;
+    animation-duration: 2.5s;
+    animation-delay: 4s;
+  }
+  .textUpAndDown8 {
+    animation-name: textUpAndDownAnimation;
+    animation-duration: 2.5s;
+    animation-delay: 4.5s;
+  }
+  .textUpAndDown9 {
+    animation-name: textUpAndDownAnimation;
+    animation-duration: 2.5s;
+    animation-delay: 5s;
   }
   @keyframes textUpAndDownAnimation {
     0% {
-      
+      margin-top: 0%;
     }
-  }
-  @keyframes treeAnimation {
-    0% {
-      margin-left: 50vh;
-      margin-top: auto;
-      opacity: 1;
-      filter: blur(0px);
+    30% {
+      margin-top: 2%;
+    }
+    58% {
+      margin-top: -2%;
     }
     100% {
-      margin-right: 100vh;
-      margin-top: auto;
-      opacity: 0.5;
-      filter: blur(4px);
+      margin-top: 0%;
     }
   }
 }
 
+@layer comeFromBottomAnimation {
+  .comeInFromBottomAnimation {
+    animation-name: ComeFromBottomAnimation;
+    animation-duration: 1s;
+  }
+  @keyframes ComeFromBottomAnimation {
+    0% {
+      opacity: 0;
+      margin-top: 20%;
+    }
+    100% {
+      opacity: 1;
+      margin-top: 0%;
+    }
+  }
+}
+
+@layer cloudsSceneChangeLayer {
+  @keyframes cloudsSceneChangeKeyframes {
+    0% {
+      opacity: 1;
+      margin-top: 100vh;
+      transform: scale(1);
+    }
+
+    100% {
+      opacity: 1;
+      margin-top: -50vh;
+      transform: scale(2);
+    }
+  }
+  .cloudsSceneChangeAnimation {
+    animation-name: cloudsSceneChangeKeyframes;
+    animation-duration: 8s;
+    animation-delay: 3s;
+  }
+}
+@layer fadeToBlack {
+  @keyframes fadeToBlackKeyframes {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  .fadeToBlackAnimation {
+    animation-name: fadeToBlackKeyframes;
+    animation-duration: 5s;
+    animation-delay: 7s;
+  }
+}
 @layer cursiveWriting {
   .cursiveFont {
     font-family: 'Brush Script MT', cursive;
   }
 }
 
-.startingTreeAnimation {
-  @apply startingAnimationCSSTREE;
-}
-
 .cursive {
   @apply cursiveFont;
+}
+
+.textBounce1 {
+  @apply textUpAndDown1;
+}
+.textBounce2 {
+  @apply textUpAndDown2;
+}
+.textBounce3 {
+  @apply textUpAndDown3;
+}
+.textBounce4 {
+  @apply textUpAndDown4;
+}
+.textBounce5 {
+  @apply textUpAndDown5;
+}
+.textBounce6 {
+  @apply textUpAndDown6;
+}
+.textBounce7 {
+  @apply textUpAndDown7;
+}
+.textBounce8 {
+  @apply textUpAndDown8;
+}
+.textBounce9 {
+  @apply textUpAndDown9;
+}
+.comeFromBottom {
+  @apply comeInFromBottomAnimation;
+}
+.cloudsSceneChange {
+  @apply cloudsSceneChangeAnimation;
+}
+.fadeToBlack {
+  @apply fadeToBlackAnimation;
 }
