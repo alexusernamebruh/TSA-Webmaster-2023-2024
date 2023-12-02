@@ -20,7 +20,7 @@ export default function Home() {
             <p className='textBounce9'>nice?</p>
           </div>
         </div>
-        <div className='cloudsSceneChange opacity-0'>
+        <div className='cloudsSceneChange'>
           <img src='/cloudstransparent.png' />
         </div>
       </div>
