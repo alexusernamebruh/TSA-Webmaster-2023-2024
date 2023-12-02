@@ -4,7 +4,7 @@ export default function Home() {
   return (
     //Theme colors are grass green, sky blue, and white
     <div className='bg-black h-screen w-screen comeInFocus'>
-      <div className="bg-[url('/Sunrise.jpeg')] fadeToBlack bg-fixed w-full h-full bg-cover bg-no-repeat">
+      <div className="bg-[url('/Sunrise.jpeg')] fadeToBlack bg-fixed overflow-clip w-full h-full bg-cover bg-no-repeat">
         <div className='flex'>
           {/* add animated sparkles to background*/}
           {/* have clouds from bottom come in for scene change once text is done with animation*/}
