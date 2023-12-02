@@ -20,8 +20,8 @@ export default function Home() {
             <p className='textBounce9'>nice?</p>
           </div>
         </div>
-        <div className='cloudsSceneChange'>
-          <img src='/cloudstransparent.png' />
+        <div className='cloudsSceneChange opacity-0'>
+          <img src='/cloudsTransparent.png' />
         </div>
       </div>
     </div>
