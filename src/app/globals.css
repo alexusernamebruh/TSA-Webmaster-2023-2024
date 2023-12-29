@@ -26,6 +26,134 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+@layer SolarPanelAnimationLayer {
+  .solarPanelAnimation {
+    animation-name: solarPanelKeyframes;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    /* animation-iteration-count: infinite; */
+  }
+  @keyframes solarPanelKeyframes {
+    0% {
+      margin-left: 0%;
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(2);
+      margin-left: 100%;
+    }
+  }
+}
+
+@layer TextIntro1AnimationLayer {
+  .textIntro1AnimationLayer {
+    animation-name: textIntro1AnimationKeyframes;
+    animation-duration: 6s;
+  }
+  @keyframes textIntro1AnimationKeyframes {
+    0% {
+      opacity: 0;
+      margin-left: 9vw;
+    }
+    50% {
+      opacity: 0;
+      margin-left: 9vw;
+    }
+    90% {
+      opacity: 1;
+      font-size: 5rem;
+      margin-left: 9vw;
+    }
+  }
+}
+
+@layer TextIntro2AnimationLayer {
+  .textIntro2AnimationLayer {
+    animation-name: textIntro2AnimationKeyframes;
+    animation-duration: 10s;
+  }
+  @keyframes textIntro2AnimationKeyframes {
+    0% {
+      opacity: 0;
+    }
+    40% {
+      opacity: 0;
+    }
+    75% {
+      text-shadow: 0 0 2px #ecc657, 0 0 6px #e1f054;
+    }
+    90% {
+      opacity: 1;
+      font-size: 5rem;
+    }
+  }
+}
+
+@layer TextIntro3AnimationLayer {
+  .textIntro3AnimationLayer {
+    animation-name: textIntro3AnimationKeyframes;
+    animation-duration: 18s;
+  }
+  @keyframes textIntro3AnimationKeyframes {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    75% {
+      opacity: 1;
+    }
+  }
+}
+
+@layer bgFadeInLayer {
+  .bgFadeInAnimationLayer {
+    animation-name: bgFadeInKeyframes;
+    animation-duration: 15s;
+  }
+  @keyframes bgFadeInKeyframes {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    60% {
+      opacity: 0.9;
+    }
+  }
+}
+
+@layer LoadingAnimationLayer {
+  .loadingAnimationSolarPanelCSS {
+    animation-name: loadingAnimationKeyframes;
+    animation-duration: 3s;
+  }
+  @keyframes loadingAnimationKeyframes {
+    0% {
+      position: absolute;
+      margin-left: 50vw;
+      margin-top: 50vh;
+
+      transform: scale(5);
+      transform: rotate(180deg);
+    }
+    40% {
+      position: absolute;
+      margin-left: 50vw;
+      margin-top: 50vh;
+      transform: rotate(0deg), scale(5);
+    }
+    80% {
+      position: absolute;
+      margin-left: 50vw;
+      margin-top: 50vh;
+      transform: scale(5);
+    }
+  }
+}
+
 @layer textUpAndDownAnimations {
   .textUpAndDown1 {
     animation-name: textUpAndDownAnimation;
@@ -112,7 +240,6 @@ body {
       margin-top: 100vh;
       transform: scale(1);
     }
-
     100% {
       opacity: 1;
       margin-top: -50vh;
@@ -123,6 +250,43 @@ body {
     animation-name: cloudsSceneChangeKeyframes;
     animation-duration: 8s;
     animation-delay: 3s;
+  }
+}
+
+@layer birdFlyingLayer {
+  @keyframes birdFlyingKeyframes {
+    0% {
+      top: 10em;
+      left: -10vw;
+      opacity: 1;
+    }
+    100% {
+      top: 10rem;
+      opacity: 0;
+      left: 95vw;
+    }
+  }
+  .birdFlyingAnimation {
+    animation-name: birdFlyingKeyframes;
+    animation-duration: 10s;
+    animation-iteration-count: 3;
+    animation-timing-function: linear;
+  }
+}
+
+@layer scaleLayer {
+  .scaleAnimation {
+    animation-name: scaleKeyframes;
+    animation-duration: 8s;
+    animation-delay: 3s;
+  }
+  @keyframes scaleKeyframes {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(2);
+    }
   }
 }
 @layer fadeToBlack {
@@ -185,4 +349,43 @@ body {
 }
 .fadeToBlack {
   @apply fadeToBlackAnimation;
+}
+.scale {
+  @apply scaleAnimation;
+}
+.birdFlying {
+  @apply birdFlyingAnimation;
+}
+.solarPanel {
+  @apply solarPanelAnimation;
+}
+
+.bg-grid {
+  background-size: 40px 40px;
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.04) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+}
+
+.loadingAnimationSolarPanel {
+  @apply loadingAnimationSolarPanelCSS;
+}
+
+.textIntro1 {
+  @apply textIntro1AnimationLayer;
+}
+
+.textIntro2 {
+  @apply textIntro2AnimationLayer;
+}
+
+.textIntro3 {
+  @apply textIntro3AnimationLayer;
+}
+
+.bgFadeIn {
+  @apply bgFadeInAnimationLayer;
 }
