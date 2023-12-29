@@ -8,23 +8,15 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      keyframes: {
-        wiggle: {
-          '0%, 100%': { transform: 'rotate(-3deg)' },
-          '50%': { transform: 'rotate(3deg)' },
-        },
-        hitCenter: {
-        
-        }
+      gridTemplateRows: {
+        // Simple 16 row grid
+        '16': 'repeat(16, minmax(0, 1fr))',
+
+        // Complex site-specific row configuration
+        layout: '200px minmax(900px, 1fr) 100px',
       },
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
-      animation: {
-        wiggle: 'wiggle 1s ease-in-out infinite',
-        hitCenter: 'hitCenter 5s ease-in-out infinite',
+      fontFamily: {
+        customFont: ['"Custom Font"', 'sans-serif'],
       },
     },
   },
