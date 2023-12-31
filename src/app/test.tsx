@@ -1,8 +1,4 @@
-import Image from 'next/image';
-import treesvg from './images/tree.svg';
-import { useState } from 'react';
-import Typewriter from './components/typewriter';
-
+'use client';
 export default function Home() {
   return (
     //Theme colors are grass green, sky blue, and white
@@ -67,4 +63,3 @@ export default function Home() {
     </div>
   );
 }
-
