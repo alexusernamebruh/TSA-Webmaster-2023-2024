@@ -26,6 +26,67 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+@layer marqueeAnimationLayer {
+  .marqueeAnimation1 {
+    animation-name: marqueeAnimationKeyframesToLeft;
+    animation-duration: 40s;
+    animation-timing-function: linear;
+    animation-delay: -40s;
+    animation-iteration-count: infinite;
+  }
+  .marqueeAnimation2 {
+    animation-name: marqueeAnimationKeyframesToLeft2;
+    animation-duration: 40s;
+    animation-delay: -20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  .marqueeAnimation3 {
+    animation-name: marqueeAnimationKeyframesToRight;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  .marqueeAnimation4 {
+    animation-name: marqueeAnimationKeyframesToRight;
+    animation-duration: 20s;
+    animation-delay: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  @keyframes marqueeAnimationKeyframesToLeft {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  @keyframes marqueeAnimationKeyframesToLeft2 {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-200%);
+    }
+  }
+}
+
+@layer backgroundFadeOutLayer {
+  .backgroundFadeOutAnimation {
+    animation-name: backgroundFadeOutKeyframes;
+    animation-duration: 5s;
+  }
+  @keyframes backgroundFadeOutKeyframes {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+}
+
 @layer SolarPanelAnimationLayer {
   .solarPanelAnimation {
     animation-name: solarPanelKeyframes;
@@ -255,21 +316,22 @@ body {
 
 @layer birdFlyingLayer {
   @keyframes birdFlyingKeyframes {
-    0% {
+    10% {
       top: 10em;
       left: -10vw;
       opacity: 1;
     }
     100% {
       top: 10rem;
-      opacity: 0;
+      opacity: 0.2;
       left: 95vw;
     }
   }
   .birdFlyingAnimation {
     animation-name: birdFlyingKeyframes;
     animation-duration: 10s;
-    animation-iteration-count: 3;
+    animation-delay: 10s;
+    animation-iteration-count: infinite;
     animation-timing-function: linear;
   }
 }
@@ -388,4 +450,24 @@ body {
 
 .bgFadeIn {
   @apply bgFadeInAnimationLayer;
+}
+
+.marquee1 {
+  @apply marqueeAnimation1;
+}
+
+.marquee2 {
+  @apply marqueeAnimation2;
+}
+
+.marquee3 {
+  @apply marqueeAnimation3;
+}
+
+.marquee4 {
+  @apply marqueeAnimation4;
+}
+
+.backgroundFadeOut {
+  @apply backgroundFadeOutAnimation;
 }
