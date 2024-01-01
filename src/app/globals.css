@@ -26,6 +26,36 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+@layer slideToRight {
+  .slideToRightAnimation {
+    animation-name: slideToRightKeyframes;
+    animation-duration: 3s;
+  }
+  @keyframes slideToRightKeyframes {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(120%);
+    }
+  }
+}
+
+@layer slideToLeft {
+  .slideToLeftAnimation {
+    animation-name: slideToLeftKeyframes;
+    animation-duration: 3s;
+  }
+  @keyframes slideToLeftKeyframes {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-120%);
+    }
+  }
+}
+
 @layer marqueeAnimationLayer {
   .marqueeAnimation1 {
     animation-name: marqueeAnimationKeyframesToLeft;
@@ -72,17 +102,17 @@ body {
   }
 }
 
-@layer backgroundFadeOutLayer {
-  .backgroundFadeOutAnimation {
-    animation-name: backgroundFadeOutKeyframes;
-    animation-duration: 5s;
+@layer backgroundFadeInLayer {
+  .backgroundFadeInAnimation {
+    animation-name: backgroundFadeInKeyframes;
+    animation-duration: 1s;
   }
-  @keyframes backgroundFadeOutKeyframes {
+  @keyframes backgroundFadeInKeyframes {
     0% {
-      opacity: 1;
+      opacity: 0;
     }
     100% {
-      opacity: 0;
+      opacity: 1;
     }
   }
 }
@@ -468,6 +498,14 @@ body {
   @apply marqueeAnimation4;
 }
 
-.backgroundFadeOut {
-  @apply backgroundFadeOutAnimation;
+.backgroundFadeIn {
+  @apply backgroundFadeInAnimation;
+}
+
+.slideToRight {
+  @apply slideToRightAnimation;
+}
+
+.slideToLeft {
+  @apply slideToLeftAnimation;
 }
