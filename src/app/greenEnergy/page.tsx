@@ -1,7 +1,25 @@
 'use client';
 import { useRouter } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
 export default function GreenEnergy() {
+  const [slideToRight, setSlideToRight] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(1);
+  const [slideClassName, setSlideClassName] = useState(
+    'w-full h-full rounded-2xl flex shadow-2xl',
+  );
+
+  useEffect(() => {
+    if (slideToRight === true) {
+      setSlideClassName(
+        'slideToRight w-full h-full rounded-2xl flex shadow-2xl',
+      );
+      setTimeout(() => {
+        setCurrentSlide(currentSlide + 1);
+        setSlideToRight(false);
+      }, 3000);
+    }
+  }, [slideToRight]);
   const router = useRouter();
   return (
     <div className='flex flex-col bg-grid w-screen h-screen bg-gray-100'>
@@ -28,40 +46,47 @@ export default function GreenEnergy() {
         </div>
       </div>
       <div className='w-full h-full p-12'>
-        <div className='w-full h-full rounded flex shadow-2xl'>
-          <img
-            className='w-1/2 h-full object-cover'
-            src='https://images.pexels.com/photos/886521/pexels-photo-886521.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-          />
-          <div className='flex p-8 relative w-full h-full bg-green-100'>
-            <div className='mx-auto'>
-              <p className='text-4xl text-center font-extrabold'>
-                <span className='bg-gradient-to-r from-green-400 to-lime-500 text-transparent bg-clip-text'>
-                  Green
-                </span>
-                <span className='bg-yellow-400 text-transparent bg-clip-text'>
-                  {' '}
-                  Energy
-                </span>
-              </p>
+        <div className='w-full h-full rounded-2xl flex overflow-hidden'>
+          {currentSlide === 1 && (
+            <div className={slideClassName}>
+              <img
+                className='rounded-l-2xl w-1/2 h-full object-cover'
+                src='https://images.pexels.com/photos/886521/pexels-photo-886521.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+              />
+              <div className='flex p-8 relative w-full h-full bg-green-100 rounded-r-2xl'>
+                <div className='mx-auto'>
+                  <p className='text-4xl text-center font-extrabold'>
+                    <span className='bg-gradient-to-r from-green-400 to-lime-500 text-transparent bg-clip-text'>
+                      Green
+                    </span>
+                    <span className='bg-yellow-400 text-transparent bg-clip-text'>
+                      {' '}
+                      Energy
+                    </span>
+                  </p>
+                </div>
+                <div
+                  onClick={() => setSlideToRight(true)}
+                  className='bg-gray-700 absolute right-[2rem] top-[45%] bg-opacity-5 hover:bg-opacity-10 hover:cursor-pointer  w-fit h-fit rounded-full p-3'
+                >
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    fill='none'
+                    viewBox='0 0 24 24'
+                    stroke-width='1.5'
+                    stroke='currentColor'
+                    className='w-8 h-8 text-gray-400'
+                  >
+                    <path
+                      stroke-linecap='round'
+                      stroke-linejoin='round'
+                      d='m8.25 4.5 7.5 7.5-7.5 7.5'
+                    />
+                  </svg>
+                </div>
+              </div>
             </div>
-            <div className='bg-gray-900 absolute right-[2rem] top-[45%] bg-opacity-5 hover:bg-opacity-10 hover:cursor-pointer border-4 border-gray-300  w-fit h-fit rounded-full p-3'>
-              <svg
-                xmlns='http://www.w3.org/2000/svg'
-                fill='none'
-                viewBox='0 0 24 24'
-                stroke-width='1.5'
-                stroke='currentColor'
-                className='w-8 h-8 text-gray-400'
-              >
-                <path
-                  stroke-linecap='round'
-                  stroke-linejoin='round'
-                  d='m8.25 4.5 7.5 7.5-7.5 7.5'
-                />
-              </svg>
-            </div>
-          </div>
+          )}
         </div>
       </div>
     </div>
