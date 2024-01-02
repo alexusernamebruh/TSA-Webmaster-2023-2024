@@ -61,16 +61,21 @@ export default function Home() {
               />
             </div>
           </div>
+          <div className='pr-6 font-semibold hover:cursor-pointer hover:underline ml-auto my-auto text-gray-100 text-xl hover:text-gray-200'>
+            Sources
+          </div>
         </div>
         <div className='w-full h-full flex'>
-          <img
-            src='https://clipart-library.com/img1/1663288.gif'
-            className='absolute opacity-0 w-10 h-10 birdFlying'
-          />
-          <img
-            className='w-full h-[93vh] opacity-70 z-0 bgFadeIn absolute'
-            src='https://cdn.pixabay.com/photo/2017/03/13/07/34/photovoltaic-2138992_1280.jpg'
-          />
+          <div className='sm:hidden md:block'>
+            <img
+              src='https://clipart-library.com/img1/1663288.gif'
+              className='absolute opacity-0 w-10 h-10 birdFlying'
+            />
+            <img
+              className='w-full h-[93vh] opacity-70 z-0 bgFadeIn absolute'
+              src='https://cdn.pixabay.com/photo/2017/03/13/07/34/photovoltaic-2138992_1280.jpg'
+            />
+          </div>
           <div className='mx-auto my-auto text-center z-40'>
             <div>
               <p className=' text-5xl font-extrabold'>
@@ -134,8 +139,8 @@ export default function Home() {
 
         <div className='flex w-full mt-auto'>
           <div className='mr-auto bg-gradient-to-tr from-purple-500 via-pink-500 to-white w-[15rem] h-[7rem] rounded-tr-full ' />
-          <div className='bg-gradient-to-r from-green-500 to-green-700 text-center my-auto p-5 rounded-lg'>
-            <p className='text-white text-4xl font-bold my-auto'>
+          <div className='bg-gradient-to-r from-green-500 to-green-700 text-center my-auto sm:p-2 md:p-3 lg:p-4 xl:p-5 rounded-lg'>
+            <p className='text-white sm:text-4xl md:text-xl lg:text-2xl xl:text-4xl font-bold my-auto'>
               Click on an image to learn more!
             </p>
           </div>
