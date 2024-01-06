@@ -1,7 +1,7 @@
 'use client';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
-
+//PLEASE WORK
 export default function WindPower() {
   const [currentSlide, setCurrentSlide] = useState(1);
   const [slideClassName, setSlideClassName] = useState(
