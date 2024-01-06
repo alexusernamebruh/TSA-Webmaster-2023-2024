@@ -85,6 +85,16 @@ export default function Sources() {
             >
               https://energy.gov
             </div>{' '}
+            <div
+              onClick={() =>
+                router.push(
+                  'https://www.energystar.gov/about/federal_tax_credits/small_wind_turbines',
+                )
+              }
+              className='text-blue-500 mx-2 hover:underline hover:cursor-pointer'
+            >
+              https://www.energystar.gov/about/federal_tax_credits/small_wind_turbines
+            </div>{' '}
           </div>
         </div>
       </div>
@@ -178,6 +188,16 @@ export default function Sources() {
                 className='text-blue-500 mx-2 hover:underline hover:cursor-pointer'
               >
                 https://energy.gov
+              </div>{' '}
+              <div
+                onClick={() =>
+                  router.push(
+                    'https://www.energystar.gov/about/federal_tax_credits/small_wind_turbines',
+                  )
+                }
+                className='text-blue-500 mx-2 hover:underline hover:cursor-pointer'
+              >
+                https://www.energystar.gov/about/federal_tax_credits/small_wind_turbines
               </div>{' '}
             </div>
           </div>
