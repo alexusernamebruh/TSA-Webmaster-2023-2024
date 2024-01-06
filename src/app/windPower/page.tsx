@@ -1,15 +1,17 @@
 'use client';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
-
+//PLEASE WORK
 export default function WindPower() {
   const [currentSlide, setCurrentSlide] = useState(1);
   const [slideClassName, setSlideClassName] = useState(
     'w-full h-full rounded-2xl flex shadow-2xl',
   );
-
-  document.addEventListener('touchstart', handleTouchStart, false);
-  document.addEventListener('touchmove', handleTouchMove, false);
+  if (typeof document !== 'undefined') {
+    // code that relies on the document object
+    document.addEventListener('touchstart', handleTouchStart, false);
+    document.addEventListener('touchmove', handleTouchMove, false);
+  }
   let xDown: any = null;
   let yDown: any = null;
 
