@@ -7,9 +7,11 @@ export default function WindPower() {
   const [slideClassName, setSlideClassName] = useState(
     'w-full h-full rounded-2xl flex shadow-2xl',
   );
-
-  document.addEventListener('touchstart', handleTouchStart, false);
-  document.addEventListener('touchmove', handleTouchMove, false);
+  if (typeof document !== 'undefined') {
+    // code that relies on the document object
+    document.addEventListener('touchstart', handleTouchStart, false);
+    document.addEventListener('touchmove', handleTouchMove, false);
+  }
   let xDown: any = null;
   let yDown: any = null;
 

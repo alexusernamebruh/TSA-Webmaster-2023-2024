@@ -9,8 +9,12 @@ export default function GreenEnergy() {
   );
 
   const router = useRouter();
-  document.addEventListener('touchstart', handleTouchStart, false);
-  document.addEventListener('touchmove', handleTouchMove, false);
+  if (typeof document !== 'undefined') {
+    // code that relies on the document object
+    document.addEventListener('touchstart', handleTouchStart, false);
+    document.addEventListener('touchmove', handleTouchMove, false);
+  }
+
   let xDown: any = null;
   let yDown: any = null;
 
