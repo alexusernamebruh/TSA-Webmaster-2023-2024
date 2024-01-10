@@ -4,21 +4,17 @@ import { useRouter } from 'next/navigation';
 
 export default function Home() {
   const router = useRouter();
-  const [showDown, setShowDown] = useState(false);
   const images = [
     {
-      imageUrl:
-        'https://cdn.pixabay.com/photo/2022/08/24/17/11/windmill-7408365_1280.jpg',
+      imageUrl: './windmill1.jpg',
       page: '/windPower',
     },
     {
-      imageUrl:
-        'https://cdn.pixabay.com/photo/2017/11/16/17/56/solar-2955323_1280.jpg',
+      imageUrl: './solarpanel1.jpg',
       page: '/solarPower',
     },
     {
-      imageUrl:
-        'https://cdn.pixabay.com/photo/2015/02/12/22/54/dam-634396_1280.jpg',
+      imageUrl: './hydro1.jpg',
       page: '/hydroPower',
     },
     {
@@ -29,18 +25,15 @@ export default function Home() {
   ];
   const images2 = [
     {
-      imageUrl:
-        'https://cdn.pixabay.com/photo/2022/08/24/17/11/windmill-7408365_1280.jpg',
+      imageUrl: './windmill1.jpg',
       page: '/windPower',
     },
     {
-      imageUrl:
-        'https://cdn.pixabay.com/photo/2017/11/16/17/56/solar-2955323_1280.jpg',
+      imageUrl: './solarpanel1.jpg',
       page: '/solarPower',
     },
     {
-      imageUrl:
-        'https://cdn.pixabay.com/photo/2015/02/12/22/54/dam-634396_1280.jpg',
+      imageUrl: './hydro1.jpg',
       page: '/hydroPower',
     },
     {
@@ -77,12 +70,12 @@ export default function Home() {
         <div className='w-full h-full flex'>
           <div className='hidden md:block'>
             <img
-              src='https://clipart-library.com/img1/1663288.gif'
-              className='absolute hidden md:block md:opacity-0 sm:opacity-0 md:w-10 md:h-10 md:birdFlying'
+              src='./birdflying.gif'
+              className='absolute hidden md:block md:opacity-0 0 md:w-10 md:h-10 birdFlying'
             />
             <img
               className='w-full hidden md:block h-[93vh] opacity-70 z-0 bgFadeIn absolute'
-              src='https://cdn.pixabay.com/photo/2017/03/13/07/34/photovoltaic-2138992_1280.jpg'
+              src='./sky1.jpg'
             />
           </div>
           <div className='mx-auto my-auto text-center z-40'>
