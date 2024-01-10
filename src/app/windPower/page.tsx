@@ -276,7 +276,7 @@ export default function WindPower() {
               <div className={slideClassName}>
                 <img
                   className='rounded-l-2xl w-1/2 h-full object-cover'
-                  src='https://cdn.pixabay.com/photo/2015/11/18/11/24/windmills-1048981_1280.jpg'
+                  src='./windmills2.jpg'
                 />
                 <div className='flex p-8 relative w-full h-full bg-sky-300 rounded-r-2xl'>
                   <div className='mx-auto flex flex-col w-full'>
@@ -362,7 +362,7 @@ export default function WindPower() {
                   </div>
                   <img
                     className='rounded-l-2xl h-full object-cover'
-                    src='https://cdn.pixabay.com/photo/2020/10/10/14/31/windmills-5643293_1280.jpg'
+                    src='./windmills3.jpg'
                   />
                 </div>
                 <div className='flex p-8 relative w-full h-full bg-sky-300 rounded-r-2xl'>
@@ -452,7 +452,7 @@ export default function WindPower() {
                   </div>
                   <img
                     className='rounded-l-2xl w-full h-full object-cover'
-                    src='https://cdn.pixabay.com/photo/2012/06/22/23/08/windmill-50512_1280.jpg'
+                    src='./windmills4.jpg'
                   />
                 </div>
                 <div className='flex p-8 relative w-full h-full bg-sky-300 rounded-r-2xl'>
@@ -538,7 +538,7 @@ export default function WindPower() {
                   </div>
                   <img
                     className='rounded-l-2xl w-full h-full object-cover'
-                    src='https://cdn.pixabay.com/photo/2021/06/03/13/18/windmill-6307058_1280.jpg'
+                    src='./windmills5.jpg'
                   />
                 </div>
                 <div className='flex p-8 relative w-full h-full bg-sky-300 rounded-r-2xl'>
@@ -626,7 +626,7 @@ export default function WindPower() {
                   </div>
                   <img
                     className='rounded-l-2xl w-full h-full object-cover'
-                    src='https://cdn.pixabay.com/photo/2020/09/21/23/31/windmill-5591464_1280.jpg'
+                    src='./windmills6.jpg'
                   />
                 </div>
                 <div className='flex p-8 relative w-full h-full bg-sky-300 rounded-r-2xl'>
